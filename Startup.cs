@@ -39,6 +39,10 @@ namespace WEB_API_CORE_DEMO
             // register repos
             services.AddScoped<IProductRepositories, ProductRepositories>();
             services.AddScoped<IProductServices, ProductServices>();
+            services.AddScoped<ICourceRepositories, CourceRepositories>();
+            services.AddScoped<ICourceServices, CourceServices>();
+            services.AddScoped<IEmployeeRepositories, EmployeeRepositories>();
+            services.AddScoped<IEmployeeServices, EmployeeServices>();
 
             services.AddSwaggerGen(c =>
             {

@@ -8,11 +8,11 @@ using WEB_API_CORE_DEMO.Services;
 
 namespace WEB_API_CORE_DEMO.Services
 {
-    public class EmployeeServives: IEmployeeServices
+    public class EmployeeServices: IEmployeeServices
     {
         private readonly IEmployeeRepositories _iEmployeeRepo;
         // Injecition of Dependancy using constructor
-        public EmployeeServives(IEmployeeRepositories iEmployeeRepo)
+        public EmployeeServices(IEmployeeRepositories iEmployeeRepo)
         {
             _iEmployeeRepo = iEmployeeRepo;
         }
@@ -23,7 +23,7 @@ namespace WEB_API_CORE_DEMO.Services
         public int DeleteEmployee(int id)
         {
             return _iEmployeeRepo.DeleteEmployee(id);
-        }
+        }  
         public IEnumerable<Employee> GetAllEmployees()
         {
             return _iEmployeeRepo.GetAllEmployees();
